@@ -1,9 +1,15 @@
 ------------Self-Assessment-------------------
+
 Criteria 	Pts
+
 Course 	4
+
 Section 	4
+
 Student 	4
+
 Faculty 	4
+
 Enrollment 	4
 
 I decided to do this project using PHP.
