@@ -4,6 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>faculty</title>
+                <?php
+   //include CSS Style Sheet
+        echo "<link rel='stylesheet' type='text/css' href='views/style.php' />";
+        ?>
     </head>
     <?php include ('navBar.php'); ?>
     </br>
@@ -12,7 +16,7 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>email</th>
+                <th>Email</th>
             </tr>
             <?php foreach ($faculties as $faculty) : ?>
                 <tr>
@@ -28,7 +32,7 @@
         <form action="faculty.php" method="post"> 
             <label>Name:</label> 
             <input type="text" name="name"/><br> 
-            <label>email:</label> 
+            <label>Email:</label> 
             <input type="text" name="email"/><br> 
             <input type="hidden" name='action' value='insert_or_update'/>
             <input type="radio" name="insert_or_update" value="insert" checked>Add</br>
@@ -37,7 +41,7 @@
             <input type="submit" value="Submit"/> 
         </form>
         </br>
-        <h2>Delete faculty</h2>
+        <h2>Delete Faculty</h2>
         <form action="faculty.php" method="post"> 
             <?php include("facultyDropDown.php"); ?>
             <input type="hidden" name='action' value='delete'/>

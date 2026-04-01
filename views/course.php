@@ -4,6 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>courses</title>
+        <?php
+   //include CSS Style Sheet
+        echo "<link rel='stylesheet' type='text/css' href='views/style.php' />";
+        ?>
     </head>
     <?php include ('navBar.php'); ?>
     </br>
@@ -13,7 +17,7 @@
                 <th>Course Code</th>
                 <th>Course Name</th>
                 <th>Description</th>
-                <th>credits</th>
+                <th>Credits</th>
             </tr>
             <?php foreach ($courses as $course) : ?>
                 <tr>
@@ -26,15 +30,15 @@
             <?php endforeach; ?>
         </table>
         </br>
-        <h2>Add or Update course</h2>
+        <h2>Add or Update Course</h2>
         <form action="course.php" method="post"> 
             <label>Course Name:</label> 
             <input type="text" name="name"/><br> 
             <label>Course Code:</label> 
             <input type="text" name="code"/><br> 
-            <label>credits:</label> 
+            <label>Credits:</label> 
             <input type="text" name="credits"/><br> 
-            <label>desc:</label> 
+            <label>Course Description:</label> 
             <input type="text" name="description"/><br> 
             <input type="hidden" name='action' value='insert_or_update'/>
             <input type="radio" name="insert_or_update" value="insert" checked>Add</br>
@@ -43,7 +47,7 @@
             <input type="submit" value="Submit"/> 
         </form>
         </br>
-        <h2>Delete course</h2>
+        <h2>Delete Course</h2>
         <form action="course.php" method="post"> 
             <?php include("courseDropDown.php"); ?>
             <input type="hidden" name='action' value='delete'/>

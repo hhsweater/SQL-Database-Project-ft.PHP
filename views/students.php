@@ -4,6 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Students</title>
+                <?php
+   //include CSS Style Sheet
+        echo "<link rel='stylesheet' type='text/css' href='views/style.php' />";
+        ?>
     </head>
     <?php include ('navBar.php'); ?>
     </br>

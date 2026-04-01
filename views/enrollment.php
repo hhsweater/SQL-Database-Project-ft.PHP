@@ -4,6 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>enrollments</title>
+                <?php
+   //include CSS Style Sheet
+        echo "<link rel='stylesheet' type='text/css' href='views/style.php' />";
+        ?>
     </head>
     <?php include ('navBar.php'); ?>
     </br>
@@ -26,7 +30,7 @@
             <?php endforeach; ?>
         </table>
         </br>
-        <h2>Add or Update enrollment</h2>
+        <h2>Add or Update Enrollment</h2>
         <form action="enrollment.php" method="post"> 
             <label>Student Id:</label> 
             <input type="text" name="student_id"/><br> 
@@ -41,7 +45,7 @@
             <input type="submit" value="Submit"/> 
         </form>
         </br>
-        <h2>Delete enrollment</h2>
+        <h2>Delete Enrollment</h2>
         <form action="enrollment.php" method="post"> 
             <?php include("enrollmentDropDown.php"); ?>
             <input type="hidden" name='action' value='delete'/>
